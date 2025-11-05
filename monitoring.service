@@ -1,0 +1,12 @@
+[Unit]
+Description=Мониторинг test и доступ api
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/vboxuser/labbash/.testtask.sh
+
+[Install]
+WantedBy=multi-user.target
+

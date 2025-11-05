@@ -1,0 +1,10 @@
+[Unit]
+Description=Мониторинг test и доступ api каждую минуту
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+Unit=monitoring.service
+
+[Install]
+WantedBy=timers.target
