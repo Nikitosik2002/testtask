@@ -4,7 +4,9 @@ Description=Мониторинг test и доступ api каждую мину�
 [Timer]
 OnBootSec=1min
 OnUnitActiveSec=1min
+# Какой unit должен выполняться при срабатывании таймера
 Unit=monitoring.service
 
 [Install]
+# Активируется вместе с timers.target (глобальная цель для таймеров)
 WantedBy=timers.target

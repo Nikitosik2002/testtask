@@ -1,5 +1,6 @@
 [Unit]
 Description=Мониторинг test и доступ api
+# Запуск только после полной инициализации сети
 After=network-online.target
 Wants=network-online.target
 
@@ -8,5 +9,6 @@ Type=oneshot
 ExecStart=/home/vboxuser/labbash/.testtask.sh
 
 [Install]
+# Активируется в многопользовательском режиме (при запуске системы)
 WantedBy=multi-user.target
 
